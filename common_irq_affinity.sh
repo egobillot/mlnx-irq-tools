@@ -52,7 +52,7 @@ function get_irq_list
 function show_irq_affinity
 {
 	irq_num=$1
-	smp_affinity_path="/proc/irq/$irq_num/smp_affinity"
+	smp_affinity_path="/proc/irq/$irq_num/smp_affinity_list"
         if [ -f $smp_affinity_path ]; then
                 echo -n "$irq_num: "
                 cat $smp_affinity_path
